@@ -167,8 +167,8 @@ def processFolder(
 
 
 if __name__ == "__main__":
-    IMAGE_FOLDER = "/home/mlove/Sandia/Au 3 stills/manual/cropped"
-    CHECKPOINT = "/home/mlove/Sandia/sam2_fatigue/sam2_repo/checkpoints/sam2.1_hiera_large.pt"
+    IMAGE_FOLDER = "/path/to/image/image/stack"
+    CHECKPOINT = "/path/to/repo/sam2_fatigue/sam2_repo/checkpoints/sam2.1_hiera_large.pt"
     CFG = "configs/sam2.1/sam2.1_hiera_l.yaml" # Needs to be relative path; breaks when using absolute
 
     processFolder(IMAGE_FOLDER, CHECKPOINT, CFG)
