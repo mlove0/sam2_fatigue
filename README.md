@@ -29,6 +29,12 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
    conda activate [name]
    ```
    
+    or, using Conda:
+   ```bash
+   conda create -n [name]
+   conda activate [name]
+   ```
+   
 4. Install required Python dependencies:
     ```bash
     pip install -r requirements.txt
