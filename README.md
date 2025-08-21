@@ -10,7 +10,7 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
 ---
 
 ## Installation and Setup
-
+activate
 1. Clone this repository to your local machine by opening a terminal instance and typing:
    ```bash
    git clone https://github.com/sam2_fatigue.git
@@ -28,13 +28,7 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
    conda create -n [name]
    conda activate [name]
    ```
-   
-    or, using Conda:
-   ```bash
-   conda create -n [name]
-   conda activate [name]
-   ```
-   
+      
 4. Install required Python dependencies:
     ```bash
     pip install -r requirements.txt
