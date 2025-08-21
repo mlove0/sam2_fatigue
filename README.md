@@ -19,15 +19,22 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
 
 2. (Optional but recommended) Create and activate a virtual environment:
     ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
+    python3 -m venv [name]
+    source [name]/bin/activate
     ```
-3. Install required Python dependencies:
+
+    or, using Conda:
+   ```bash
+   conda create -n [name]
+   conda activate [name]
+   ```
+   
+4. Install required Python dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Install SAM 2 by following the instructions in [Meta's SAM 2 repository](https://github.com/facebookresearch/sam2):
+5. Install SAM 2 by following the instructions in [Meta's SAM 2 repository](https://github.com/facebookresearch/sam2):
     - Clone the repo as a subdirectory of this repository.
     - Rename the folder to something other than sam2 (e.g. sam2_repo) to avoid import conflicts.
     Your final directory structure should look like this:
