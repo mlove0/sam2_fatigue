@@ -5,7 +5,7 @@
 This repository provides a complete pipeline for analyzing nanoscale fatigue experiments using **Meta’s SAM 2 (Segment Anything Model 2)**.
 It integrates raw fatigue cycle images, metadata, and segmentation masks to extract quantitative measures of crack growth such as **crack length** and **crack width**.
 
-The pipeline is modularized into preprocessing, segmentation, and postprocessing steps, orchestrated by the `main.py` script.
+The pipeline is separated into preprocessing, segmentation, postprocessing, and analysis steps, orchestrated by the `main.py` script.
 
 ---
 
