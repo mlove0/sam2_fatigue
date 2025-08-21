@@ -50,12 +50,14 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
 ## Procedure
 
 1. **Prepare data**
+
    After conducting an experiment, open the data in Axon Studio.
    - [procedure for adding positional metadata — to be completed]
    - Export the data as a PNG stack.
    - Make sure to check the “Export Metadata” box before exporting, as this is not enabled by default.
 
-2. **Edit configuration**
+3. **Edit configuration**
+
    Open the file `main.py` and update the following variables:
    - `metadata_path` → path to the exported experiment metadata file
    - `input_dir` → path to the raw exported image stack
@@ -63,12 +65,14 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
    - `cfg` → must remain exactly as `configs/sam2.1/sam2.1_hiera_l.yaml` within the SAM 2 repo
    - Inside the script, adjust the `df.to_csv()` call to set the desired output path for your CSV.
 
-3. **Run the pipeline**
+4. **Run the pipeline**
+
    From the repository root directory, run:
    ```bash
    python3 main.py
    ```
     Processing may take a significant amount of time if running on CPU.
 
-4. **Output**
-    The script generates a CSV containing quantitative crack growth data, aligned with experiment metadata.
+5. **Output**
+
+   The script generates a CSV containing quantitative crack growth data, aligned with experiment metadata.
