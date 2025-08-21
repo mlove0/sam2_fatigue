@@ -59,5 +59,5 @@ def skeletonizedDataFrame(input_dir: str) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    input_dir = "/home/mlove/Sandia/Au_3/negatives/pos1Low-neg1High_transparencies"
+    input_dir = "/path/to/mask/transparencies"
     skel = skeletonizedDataFrame(input_dir)
