@@ -10,14 +10,16 @@ The pipeline is modularized into preprocessing, segmentation, and postprocessing
 ---
 
 ## Installation and Setup
-activate
-1. Clone this repository to your local machine by opening a terminal instance and typing:
+
+1. Ensure Python >= 3.10 is installed.
+
+2. Clone this repository to your local machine by opening a terminal instance and typing:
    ```bash
    git clone https://github.com/sam2_fatigue.git
    cd sam2_fatigue
    ```
 
-2. (Optional but recommended) Create and activate a virtual environment:
+3. (Optional but recommended) Create and activate a virtual environment:
     ```bash
     python3 -m venv [name]
     source [name]/bin/activate
@@ -66,7 +68,7 @@ activate
    - Export the data as a PNG stack by clicking the "Export/Publish" button to the lower left of the image.
       - Make sure to check the “Metadata (CSV)” box before choosing an export location and clicking "Publish", as this is not enabled by default.
 
-3. **Edit configuration**:
+2. **Edit configuration**:
 
    Open the file `main.py` and update the following variables:
    - `metadata_path` → path to the exported experiment metadata file
@@ -75,7 +77,7 @@ activate
    - `cfg` → must remain exactly as `configs/sam2.1/sam2.1_hiera_l.yaml` within the SAM 2 repo
    - Inside the script, adjust the `df.to_csv()` call to set the desired output path for your CSV.
 
-4. **Run the pipeline**:
+3. **Run the pipeline**:
 
    From the repository root directory, run:
    ```bash
@@ -83,14 +85,14 @@ activate
    ```
     Processing may take a significant amount of time if running on CPU.
 
-5. **Output**:
+4. **Output**:
 
    The script generates a CSV containing quantitative crack growth data, aligned with experiment metadata.
 
 ---
 ## How It Works
 
-The pipeline is separated into four stages, managed by ```main.py```:
+This pipeline is separated into four stages, managed by ```main.py```:
 
 1. **Image Filtering** (```img_filtering.py```)
    - Retains only images captured immediately after fatigue cycles end.
@@ -114,5 +116,6 @@ The pipeline is separated into four stages, managed by ```main.py```:
 
 ## Notes
 - Ensure you have sufficient compute resources; running on GPU is \*highly\* recommended.
+   - The minimum version of Torch (2.7.1) required by SAM 2 requires CUDA 12.1 or newer. If running this project on a GPU machine, ensure that your CUDA installation is up to date.
 - The pipeline assumes cracks are the darkest regions in the images (assuming you choose to segment inverted images), so preprocessing (inversion/CLAHE) is tuned for that.
 - Further analysis can be added downstream using the exported CSV.
