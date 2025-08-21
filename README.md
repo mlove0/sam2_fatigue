@@ -86,3 +86,33 @@ activate
 5. **Output**:
 
    The script generates a CSV containing quantitative crack growth data, aligned with experiment metadata.
+
+---
+## How It Works
+
+The pipeline is separated into four stages, managed by ```main.py```:
+
+1. **Image Filtering** (```img_filtering.py```)
+   - Retains only images captured immediately after fatigue cycles end.
+   - Renames images for consistency.
+
+2. **Image Normalization (```img_normalization.py```)
+   - Converts images to grayscale.
+   - Enhances contrast using CLAHE and contrast stretching.
+   - Optionally creates negative images for better segmentation.
+
+3. **Mask Generation** (```img_masking.py```)
+   - Runs SAM 2 on the normalized images.
+   - Produces segmentation masks highlighting cracks.
+
+4. **Skeletonization & Measurement** (```skeletonize_masks.py```)
+   - Converts crack masks into line skeletons.
+   - Extracts median crack paths, widths, and lengths.
+   - Outputs results as a clean Pandas DataFrame.
+
+---
+
+## Notes
+- Ensure you have sufficient compute resources; running on GPU is \*highly\* recommended.
+- The pipeline assumes cracks are the darkest regions in the images (assuming you choose to segment inverted images), so preprocessing (inversion/CLAHE) is tuned for that.
+- Further analysis can be added downstream using the exported CSV.
