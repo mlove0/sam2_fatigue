@@ -59,9 +59,12 @@ activate
 1. **Prepare data**:
 
    After conducting an experiment, open the data in Axon Studio.
-   - [procedure for adding positional metadata — to be completed]
-   - Export the data as a PNG stack.
-   - Make sure to check the “Export Metadata” box before exporting, as this is not enabled by default.
+   - To the right of the image, click the "Image Metadata" tab.
+      - In the "Focus Assist" section, check the box next to "Focus Score".
+      - In the "Image" section, check the boxes next to "Image Size X", "Image Size Y", "Image Pixels X", "Image Pixels Y"
+      - In the "Position" section, check the boxes next to "Stage X", "Stage 
+   - Export the data as a PNG stack by clicking the "Export/Publish" button to the lower left of the image.
+      - Make sure to check the “Metadata (CSV)” box before choosing an export location and clicking "Publish", as this is not enabled by default.
 
 3. **Edit configuration**:
 
