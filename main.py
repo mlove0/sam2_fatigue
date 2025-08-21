@@ -30,6 +30,7 @@ def main():
 
     # === 2) Normalize -> Invert ===
     ## NOTE: Inversion is optional. Comment out the norm.negatize line if you don't want inverted images.
+    ## Just don't forget to change the output directory name if you choose to do that
     normalized_dir = os.path.join(filtered_dir, "normalized")
     norm.normalizeImages(input_dir=filtered_dir, output_dir=normalized_dir)
 
