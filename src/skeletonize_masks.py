@@ -12,9 +12,9 @@ def skeletonizedDataFrame(input_dir: str) -> pd.DataFrame:
       - Extract alpha channel (expects 4-channel PNG/TIFF)
       - For each x column where mask exists, compute min(y), max(y), median(y)
       - Aggregate to per-image:
-          * avg_crack_width_pixels = mean(max_y - min_y) across x
-          * crack_length_pixels    = max(x) - min(x)
-          * mask_area_pixels       = number of masked pixels
+          * avg_crack_width_pix = mean(max_y - min_y) across x
+          * crack_length_proj_pix    = max(x) - min(x)
+          * mask_area_pix       = number of masked pixels
 
     Returns DataFrame with one row per image:
         ['ImageFileName', 'avg_crack_width_pixels', 'crack_length_pixels', 'mask_area_pixels']
