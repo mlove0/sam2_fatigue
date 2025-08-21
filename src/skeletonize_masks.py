@@ -49,9 +49,9 @@ def skeletonizedDataFrame(input_dir: str) -> pd.DataFrame:
         records.append(
             {
                 "ImageFileName": fname,
-                "avg_crack_width_pixels": avg_width,
-                "crack_length_pixels": crack_len_proj,
-                "mask_area_pixels": area,
+                "avg_crack_width_pix": avg_width,
+                "crack_length_proj_pix": crack_len_proj,
+                "mask_area_pix": area,
             }
         )
 
