@@ -106,5 +106,5 @@ This pipeline is separated into four stages, managed by ```main.py```:
 ## Notes
 - Ensure you have sufficient compute resources; running on GPU is \*highly\* recommended.
    - The minimum version of Torch (2.7.1) required by SAM 2 requires CUDA 12.1 or newer. If running this project on a GPU machine, ensure that your CUDA installation is up to date.
-- The pipeline assumes cracks are the darkest regions in the images (assuming you choose to segment inverted images), so preprocessing (inversion/CLAHE) is tuned for that.
+- The pipeline assumes cracks are the darkest regions in the images (assuming you choose to segment inverted images), so preprocessing and masking (inversion/CLAHE + SAM 2 prompting) are tuned for that.
 - Further analysis can be added downstream using the exported CSV.
