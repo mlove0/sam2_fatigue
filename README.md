@@ -26,6 +26,7 @@ The pipeline is separated into preprocessing, segmentation, postprocessing, and 
    ```
 
 4. Install SAM 2 by following the instructions in [Meta's SAM 2 repository](https://github.com/facebookresearch/sam2):
+    - Ensure that your project environment (```sam2_tem```) is activated before installing.
     - Clone the repo as a subdirectory of this repository.
     - Rename the folder to something other than sam2 (e.g. sam2_repo) to avoid import conflicts.
     Your final directory structure should look like this:
