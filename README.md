@@ -1,6 +1,6 @@
 # SAM 2 for Nanoscale Fatigue Experiments
 
-**NOTE:** The code in this repository is meant to be run on, and has only been tested on, Linux machines (specifically Ubuntu LTS 24.04) using Conda for Python. SAM 2 will not work on Windows unless installed on Windows Subsystem for Linux (WSL).
+**NOTE:** The code in this repository is meant to be run on, and has only been tested on, Linux machines (specifically Ubuntu LTS 24.04) using Conda as the Python installation medium. SAM 2 will not work on Windows unless installed on Windows Subsystem for Linux (WSL).
 
 This repository provides a complete pipeline for analyzing nanoscale fatigue experiments using **Meta’s SAM 2 (Segment Anything Model 2)**.
 It integrates raw fatigue cycle images, metadata, and segmentation masks to extract quantitative measures of crack growth such as **crack length** and **crack width**.
