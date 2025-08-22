@@ -87,7 +87,7 @@ This pipeline is separated into four stages, managed by ```main.py```:
    - Retains only images captured immediately after fatigue cycles end.
    - Renames images for consistency.
 
-2. **Image Normalization (```img_normalization.py```)
+2. **Image Normalization** (```img_normalization.py```)
    - Converts images to grayscale.
    - Enhances contrast using CLAHE and contrast stretching.
    - Optionally creates negative images for better segmentation.
