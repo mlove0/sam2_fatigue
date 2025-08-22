@@ -1,6 +1,6 @@
 # SAM 2 for Nanoscale Fatigue Experiments
 
-**NOTE:** The code in this repository is meant to be run on, and has only been tested on, Linux machines (specifically Ubuntu LTS 24.04). SAM 2 will not work on Windows unless installed on Windows Subsystem for Linux (WSL).
+**NOTE:** The code in this repository is meant to be run on, and has only been tested on, Linux machines (specifically Ubuntu LTS 24.04) using Conda for Python. SAM 2 will not work on Windows unless installed on Windows Subsystem for Linux (WSL).
 
 This repository provides a complete pipeline for analyzing nanoscale fatigue experiments using **Meta’s SAM 2 (Segment Anything Model 2)**.
 It integrates raw fatigue cycle images, metadata, and segmentation masks to extract quantitative measures of crack growth such as **crack length** and **crack width**.
@@ -11,7 +11,7 @@ The pipeline is separated into preprocessing, segmentation, postprocessing, and 
 
 ## Installation and Setup
 
-1. Ensure Python >= 3.10 is installed.
+1. Ensure Python >= 3.10 is installed using Conda.
 
 2. Clone this repository to your local machine by opening a terminal instance and typing:
    ```bash
@@ -20,23 +20,12 @@ The pipeline is separated into preprocessing, segmentation, postprocessing, and 
    ```
 
 3. (Optional but recommended) Create and activate a virtual environment:
-    ```bash
-    python3 -m venv [name]
-    source [name]/bin/activate
-    ```
-
-    or, using Conda:
    ```bash
-   conda create -n [name]
-   conda activate [name]
+   conda create -f environment.yml
+   conda activate sam2_tem
    ```
-      
-4. Install required Python dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-5. Install SAM 2 by following the instructions in [Meta's SAM 2 repository](https://github.com/facebookresearch/sam2):
+4. Install SAM 2 by following the instructions in [Meta's SAM 2 repository](https://github.com/facebookresearch/sam2):
     - Clone the repo as a subdirectory of this repository.
     - Rename the folder to something other than sam2 (e.g. sam2_repo) to avoid import conflicts.
     Your final directory structure should look like this:
