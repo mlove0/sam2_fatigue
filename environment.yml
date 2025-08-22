@@ -1,0 +1,15 @@
+name: sam2_tem
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - opencv
+  - scikit-image
+  - tqdm
+  - pip:
+      - torch==2.7.1
+      - torchvision==0.22.1
