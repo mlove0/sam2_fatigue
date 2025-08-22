@@ -21,7 +21,7 @@ The pipeline is separated into preprocessing, segmentation, postprocessing, and 
 
 3. (Optional but recommended) Create and activate a virtual environment:
    ```bash
-   conda create -f environment.yml
+   conda env create -f environment.yml
    conda activate sam2_tem
    ```
 
